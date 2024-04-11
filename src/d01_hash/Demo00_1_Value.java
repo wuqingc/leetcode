@@ -66,6 +66,20 @@ public class Demo00_1_Value {
         return ans == Integer.MAX_VALUE ? 0 : ans;
     }
 
+    /*
+     * 49. 字母异位词分组
+     */
+    public List<List<String>> groupAnagrams(String[] strs) {
+        Map<String, List<String>> info = new HashMap<>();
+
+        for (String str : strs) {
+            char[] charArray = str.toCharArray();
+            Arrays.sort(charArray);
+            info.computeIfAbsent(new String(charArray), k -> new ArrayList<>()).add(str);
+        }
+        return new ArrayList<>(info.values());
+    }
+
     public static void main(String[] args) {
         System.out.println(new Demo00_1_Value().maxSum(new int[]{51, 71, 17, 24, 42}));
     }
