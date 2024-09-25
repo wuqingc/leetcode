@@ -1,5 +1,3 @@
-import java.util.*;
-
 /**
  * @author tianjiaxuan
  * @date 2024-04-10 10:01
@@ -23,5 +21,6 @@ class Solution {
 
 
     public static void main(String[] args) {
+        System.out.println(new Solution().maxArea(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7}));
     }
 }
